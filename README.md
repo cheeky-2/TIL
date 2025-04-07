@@ -19,3 +19,7 @@
 ### 다른 환경에서 git 이어서 작업하기
 1. 새폴더 연결하기
 2. `git clone 저장소주소붙여넣기`
+3. `cd 폴더이름`
+4. 수정후 `git add .`으로 다시 업로드 준비
+5. `git commit -m '변경사항 및 설명`
+6. `git push origin main`으로 gitHub로 업로드
