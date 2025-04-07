@@ -23,3 +23,4 @@
 4. 수정후 `git add .`으로 다시 업로드 준비
 5. `git commit -m '변경사항 및 설명`
 6. `git push origin main`으로 gitHub로 업로드
+7. `git pull origin main`으로 학원에서 내려받기
