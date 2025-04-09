@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>이미지와 비디오 태그</title>
+    </head>
+    <body>
+        <h1>이미지태그</h1>
+        <p>이미지 태그는 인라인으로 인라인요소와 형제관계여야 합니다.</p>
+        <p>이미지 태그 작성 시 필수로 src, alt 속성을 반드시 작성해야합니다.</p>
+        <div class="box">
+            <img src="./images/aoa_banner.jpg" alt="접근성 오픈 아카데미 유튜브 채널 구독하기, 매주 월요일 콘텐츠 업데이트!">
+            <img src="./images/banner02_img01.png" alt="당일발송(19시까지)">
+            <img src="./images/quick03.png" alt="실시간 카톡 상담하기">
+            <img src="./images/quick02.png" alt="네이버톡 상담하기">
+            <img src="./images/qucik_topinfo.jpg" alt="24시간운영, 저녁7시까지 도착보장,당일발송"><br>
+            <img src="./images/common_cart02.png" alt="장바구니">
+            <img src="./images/common_menu.png" alt="메뉴열기">
+            <img src="./images/common_my.png" alt="내정보보기">
+            <img src="./images/common_search.png" alt="검색하기">
+            <img src="./images/detail_icon_wish.png" alt="찜하기">
+            <!-- 유효성 검사 테스트용 alt 값, 속성 유무 차이 비교 -->
+            <img src="./images/aoa_banner.jpg" alt="">
+            <!-- <img src="./images/aoa_banner.jpg"> alt안적으면에러!! -->
+        </div>
+        <hr>
+        <h1>동영상태그</h1>
+        <p>동영상태그 video는 블록태그로 블록과 형제관계여야 합니다.</p>
+        <p>브라우저 별로 호환되는 확장자를 주의하며 동영상을 연결해야 합니다.</p>
+        <p>동영상태그의 주요 속성 종류와 뜻</p>
+        <p>1. autoplay : 자동재생</p>
+        <p>2. muted : 음소거</p>
+        <p>3. controls : 동영상 컨트롤러 보이기</p>
+        <p>4. loop : 동영상 반복 설정</p>
+        <video src="./video/coffee.mp4" muted loop controls poster="./images/aoa_banner.jpg"></video>
+        <video src="./video/cat.mp4" autoplay muted loop></video>
+        <video src="./video/forest.mp4" controls poster="./images/banner02_img03.png"></video>
+        <hr>
+        <iframe width="482" height="857" src="https://www.youtube.com/embed/w77ur-sY7fM?autoplay=1&mute=1&loop=1&playlist=w77ur-sY7fM" title="키보드 뽑는게 취미인 왕관 앵무 사랑이" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1310" height="737" src="https://www.youtube.com/embed/5y_8Bznohv4?autoplay=1&mute=1&loop=1&playlist=5y_8Bznohv4" title="【12시가 되자마자 누워있는 남편을 급습했다】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <a href="#"></a>  O -->
+        <!-- <img src="#">  X -->
+        <!-- <video src="#">  X -->
+    </body>
+</html>

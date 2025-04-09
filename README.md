@@ -29,3 +29,19 @@
 5. `git commit -m '변경사항 및 설명`
 6. `git push origin main`으로 gitHub로 업로드
 7. `git pull origin main`으로 학원에서 내려받기
+-----
+### 바로가기 메뉴 만들기
+0. (조건) 화면이 수직으로 충분히 이동할 수 있을만큼 스크롤 준비
+1. 바로가기 메뉴 a 태그 준비하기
+2. 바로가기 위치 div id명 준비하기
+3. 위 1번 `a` 속성 `href` 값으로 `#` 먼저 작성 후 위 2번 이름 작성하기
+4. 위 3번 결과 예시) id가 abcd일 경우 `<a href="#abcd"></a>`
+## a태그에서
+* <a href="#"></a>
+* 임시 링크 설정
+* <a href="#main"></a>
+* id main으로 바로가기 설정
+* <a href="./basic/index.html"></a>
+* 현재 위치 폴더에서 basic 폴더에 들어가서 index.html 열기
+* <a href="./basic/index.html#main"></a>
+* 현재 위치 폴더에서 basic 폴더에 들어가서 index.html 열고 그 안에 id main으로 바로가기
