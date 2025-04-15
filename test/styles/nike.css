@@ -1,0 +1,47 @@
+header {
+    background-color:aqua;
+    font-family:'Pretendard', sans-serif;
+}
+#top_wrap {
+    background-color:#ddd;
+    font-size:0.875rem;
+    height:34px;
+    line-height:34px;
+    width:1920px;
+}
+#top_wrap .left {
+    width:68px;
+    height:24px;
+    margin-top:5px;
+    margin-left:40px;
+    background-color:violet;
+    display:inline;
+}
+#top_wrap .left a {}
+#top_wrap .left a img {}
+#top_wrap .right {
+    background-color:pink;
+    text-align:right;
+    width:286px;
+    height:16px;
+    margin-right:40px;
+    display:inline;
+}
+#top_wrap .right a {
+    margin-left:3px;
+    margin-right:3px;
+}
+#top_wrap .right img {
+    margin-left:3px;
+    margin-right:3px;
+}
+#bottom_wrap {}
+#bottom_wrap img {}
+#bottom_wrap .gnb {}
+#bottom_wrap .gnb li {}
+#bottom_wrap .gnb li a {}
+#bottom_wrap .gnb li a em {}
+#bottom_wrap .gnb li .lnb2_1 {}
+#bottom_wrap .gnb li .lnb2_1 li {}
+#bottom_wrap .gnb li .lnb2_1 li a {}
+#bottom_wrap .gnb li {}
