@@ -1,0 +1,8 @@
+/* reset.css */
+html,body,h1,h2,h3,h4,h5,h6,p,a,div,blockquote,address,video,ul,ol,li,dl,dt,dd,hr,span,em,strong,s,del,sup,sub,img,q,code {
+    font-size:1em; font-weight:400; /* 글자크기, 글자굵기 */
+    line-height:1; letter-spacing:0; /* 행간, 자간 */
+    color:#000; /* 글자색깔 */
+    margin:0; padding:0; /* 여백 */
+    text-decoration:none; /* 글자특수효과 */
+}

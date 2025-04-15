@@ -1,9 +1,54 @@
-#mobile_wrap {background-color:#7D92B9;}
-#mobile_wrap .photo {}
+#mobile_wrap {
+    background-color:#7D92B9;
+    width:440px; height:956px;
+    font-family:'Pretendard', sans-serif;
+    text-align:center;
+}
+#mobile_wrap .photo {
+    margin-top:110px;
+    margin-bottom:35px;
+    display:inline-block;
+}
 #mobile_wrap .photo img {}
-#mobile_wrap h1 {}
-#mobile_wrap h1 span {}
-#mobile_wrap h2 {}
-#mobile_wrap .git {}
+#mobile_wrap h1 {
+    font-size:2.5rem;
+    color:#421900;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    line-height:1.2;
+    margin-bottom:31px;
+}
+#mobile_wrap h1 span {
+    color:#FFF183;
+    font-weight:500;
+}
+#mobile_wrap h2 {
+    font-size:1.25rem;
+    line-height:1.7;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    width:198px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    /* display:inline-block; 또는 margin-왼오 처럼 해도 된다 */
+}
+#mobile_wrap .git {
+    font-size:1rem;
+    line-height:1.7;
+    font-weight:400;
+    letter-spacing:-0.02em;
+    margin-bottom:30px;
+    display:inline-block;
+}
 #mobile_wrap .s {}
-#mobile_wrap .s li {}
+#mobile_wrap .s li {
+    font-size:1rem;
+    line-height:1.7;
+    font-weight:400;
+    letter-spacing:-0.02em;
+    width:198px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
