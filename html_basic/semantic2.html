@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 | 네이버</title>
+    <style>
+        #wrap {}
+        #wrap header {}
+        #wrap main {}
+        #wrap main .left_wrap {}
+        #wrap main .left_wrap .content {}
+        #wrap main .left_wrap .list {}
+        #wrap main #center_wrap {}
+        #wrap main #center_wrap .popular {}
+        #wrap main #center_wrap .neighbor {}
+        #wrap main .right_wrap {}
+        #wrap main .right_wrap .login {}
+        #wrap main .right_wrap .notice {}
+        #wrap main .right_wrap .cafe_link {}
+        #wrap main .right_wrap .ad {}
+        #wrap main .right_wrap .smart_bot {}
+        #wrap main .right_wrap .cs_center {}
+        #wrap main .right_wrap .fub {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <aside class="left_wrap"><!-- section으로 나눠도 되지만 ul,li로 나눠도 된다. 그리고 주로 메뉴가 있는 쪽을 aside로 많이 사용한다. -->
+                <section class="content"></section>
+                <section class="list"></section>
+            </aside>
+            <div id="center_wrap">
+                <section class="popular"></section>
+                <section class="neighbor"></section>
+            </div>
+            <aside class="right_wrap"><!-- div로 해도되고 aside로 해도되지만 aside로 할땐 class를 줘야한다. -->
+                <section class="login"></section>
+                <section class="notice"></section><!-- 공지사항 -->
+                <section class="cafe_link"></section><!-- 바로가기 -->
+                <section class="ad"></section>
+                <section class="smart_bot"></section>
+                <section class="cs_center"></section><!-- 신고센터 -->
+                <section class="fnb"></section>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
