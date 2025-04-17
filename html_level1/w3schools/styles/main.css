@@ -1,0 +1,66 @@
+#wrap {
+    width:440px;
+    height:956px;
+    padding-left:15px;
+    padding-right:15px;
+    letter-spacing:0.02em;
+}
+#wrap h1 {
+    font-size:2.5rem;
+    padding-top:180px;
+    color:#5AB2FF;
+    font-weight:700;
+}
+#wrap > p {
+    margin-top:30px;
+}/* #wrap 모든 자식 p */
+#wrap h1+p {
+    color:#5AB2FF;
+}/* #wrap의 h1 옆에 p */
+#wrap #user_information {
+    margin-top:35px;
+}
+#wrap #user_information h2 {
+    font-size:1.375rem;
+    margin-bottom:15px;
+    font-weight:600;
+    padding-top:40px;
+}
+#wrap #user_information p {}
+#wrap #user_information p input {
+    height:44px;
+    width:410px;
+    font-size:0.875rem;
+    padding-left:20px;
+    border-radius:15px;
+    border:1px solid #5AB2FF;
+    color:#999;
+}
+#wrap #user_information p #login_btn {
+    height:44px;
+    width:410px;
+    background-color:#5AB2FF;
+    color:#fff;
+    border-radius:15px;
+}
+#wrap #user_information p .login_google {
+    height:44px;
+    width:410px;
+    background-color:#fff;
+    color:#B7E0FF;
+    border-radius:15px;
+    margin-top:15px;
+    display:inline-block;
+    line-height:44px;
+    padding-left:146px;
+    border:1px solid #B7E0FF;
+}
+#wrap #user_information+p {
+    font-size:0.75rem;
+    text-align:center;
+    font-weight:500;
+}/* #wrap의 login_frm 옆에 p */
+#wrap #user_information+p .sign_up_link {
+    font-weight:600;
+    color:#5AB2FF;
+}
