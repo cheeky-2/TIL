@@ -8,14 +8,14 @@
 #wrap h1 {
     font-size:2.5rem;
     padding-top:180px;
-    color:#5AB2FF;
+    color:#3A59D1;
     font-weight:700;
 }
 #wrap > p {
     margin-top:30px;
 }/* #wrap 모든 자식 p */
 #wrap h1+p {
-    color:#5AB2FF;
+    color:#3A59D1;
 }/* #wrap의 h1 옆에 p */
 #wrap #user_information {
     margin-top:35px;
@@ -47,13 +47,13 @@
     height:44px;
     width:410px;
     background-color:#fff;
-    color:#B7E0FF;
+    color:#3A59D1;
     border-radius:15px;
     margin-top:15px;
     display:inline-block;
     line-height:44px;
     padding-left:146px;
-    border:1px solid #B7E0FF;
+    border:1px solid #3A59D1;
 }
 #wrap #user_information+p {
     font-size:0.75rem;
