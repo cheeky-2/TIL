@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블태그</title>
+    <link href="./styles/reset.css" rel="stylesheet"><!-- rel 항상 잊지 말것 -->
+    <style>
+        /* 수열선택자(의미가 없는 요소에 이름을 붙이지 않고 관계와 순서로 대상을 파악해서 선택자를 만드는 방법) */
+        #t1 tr td:nth-child(1) {background-color:lime;}
+        #t1 tr td:nth-child(2) {background-color:aqua;}
+        /* 위 방법은 자주 쓰일것 같다  - t1의 자식 tr의 자식 td중에 1번째 또는 2번째 아이를 콕 찝어서 부를 때 쓰는거*/
+        #t1,
+        #t1 tr,
+        #t1 tr td,
+        #t1 tr th {border:2px solid #000;}
+        #t2,
+        #t2 tr,
+        #t2 tr th,
+        #t2 tr td {border:1px solid #999;}
+        /* 도서재고 표 디자인 */
+        #t3 {
+            border-radius:20px;
+            overflow:hidden;/* 부모영역보다 넘치는 자식영역을 숨기는 속성 */
+        }
+        #t3 thead {
+            background-color:#ff0066;
+        }
+        #t3 thead tr {}
+        #t3 thead tr th {
+            color:#fff;
+        }
+        #t3 tbody {
+            background-color:#eee;
+        }
+        #t3 tbody tr {}
+        #t3 tbody tr td {}
+    </style>
+</head>
+<body>
+    <!-- 수평 열 합치기 속성(colspan, rowspan) -->
+    <!-- td 또는 th 열에만 주는 속성으로 적용 순서는 아래와 같다. -->
+    <!-- 
+        1. 합치고 싶은 가로방향 열 2개 이상 정하기 (개수 제한 없음)
+        2. 위에서 정한 태그 확인하기
+        3. 위 태그 중 먼저 시작한 태그 속성으로 colspan="합치는 칸의 개수"
+        4. 합쳐지는 첫번째를 제외한 나머지 태그는 주석으로 가리기
+    -->
+    <table id="t1">
+        <tr>
+            <th colspan="2">1행1열</th><!-- 칸을 합치면 기존에 있던 뒤에있는 칸을 지우거나 주석처리하는데 익숙해질때까진 주석처리하는게 좋다 -->
+            <!-- <td>1행2열</td> -->
+        </tr>
+        <tr><!-- 모든 행에 들어가는 열의 개수는 동일하게 작성한다. -->
+            <td>2행1열</td>
+            <td>2행2열</td>
+        </tr>
+    </table>
+    <hr>
+    <table id="t2">
+        <tr>
+            <th colspan="3">1</th>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td -->
+        </tr>
+        <tr>
+            <th rowspan="2">4</th>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <!-- <th>7</th> -->
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <table id="t3">
+        <thead><!-- 제목행그룹(제목만 존재해야함) -->
+            <tr><!-- 1행 -->
+                <th>제목</th>
+                <th>종류</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>사망플래그</td>
+                <td>도서</td>
+                <td>50,000원</td>
+                <td>300</td>
+                <td>재고없음</td>
+            </tr>
+            <tr>
+                <td>설마 죽기야 하겠어</td>
+                <td>도서</td>
+                <td>40,000원</td>
+                <td>212</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="t4">
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+            </tr>
+        </thead>
+        <tfoot><!-- 시각장애인이 듣는데 더 편하기 위한 배치 - 보이는데엔 아무 이상 없다 -->
+            <tr>
+                <th>제목</th>
+                <td>결과</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
