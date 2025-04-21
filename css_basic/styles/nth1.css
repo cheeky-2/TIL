@@ -1,0 +1,23 @@
+table, tr, td {border:1px solid #000; border-collapse:collapse;}
+#t {width:300px; height:300px;}
+#t tbody {}
+#t tbody tr {}
+#t tbody tr td {}
+/* #t tbody tr:nth-child(1) td:nth-child(1) {background-color:yellow;} */
+#t tbody tr:first-child td:last-child {background-color:coral;}
+#t tbody tr:nth-child(2) td:nth-child(2) {background-color:coral;}
+/* #t tbody tr:last-child td:last-child {background-color:coral;} */
+#t tbody tr:nth-child(3) td:nth-child(3) {background-color:lightsalmon;}
+.box h2:nth-child(3) {background-color:aqua;}
+.box h2:nth-of-type(1) {color:red;}
+.box h2:first-of-type {font-weight:800;}
+.box p:nth-child(5) {background-color:lime; font-size:1.875rem;}
+.box p:nth-of-type(3) {color:white; font-weight:700; width:100px;}
+.list {}
+.list li {
+    width:50px; height:50px; border:1px solid #000; 
+    display:inline-block; text-align:center; font-size:0.75rem; line-height:50px;
+}
+.list li:nth-child(3n+2) {background-color:yellow;}
+.list li:nth-child(odd) {background-color:lightcoral;}
+.list li:nth-child(even) {background-color:lightgreen;}
