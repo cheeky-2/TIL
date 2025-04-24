@@ -53,6 +53,7 @@ main section .tab_container #login_frm .id_pw input[name^=user]::placeholder {
     font-size:0.75rem;
     font-weight:500;
     color:#aaa;
+    text-transform:capitalize;
 }
 main section .tab_container #login_frm .login_stay {}
 main section .tab_container #login_frm .login_stay input[name$=stay] {
