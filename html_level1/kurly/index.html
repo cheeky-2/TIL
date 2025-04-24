@@ -38,7 +38,7 @@
                 <dd></dd>
                 <dt>이메일<em>*</em></dt>
                 <dd><input type="email" name="user_emain" placeholder="예)abc@web.com" required></dd>
-                <dd><button type="button" id="email_overlap_btn"></button></dd>
+                <dd><button type="button" id="email_overlap_btn">중복확인</button></dd>
                 <dt>휴대폰<em>*</em></dt>
                 <dd>
                     <select name="tell_company" class="tell_kind">
@@ -48,7 +48,7 @@
                     </select>
                     <input type="text" name="user_tell" placeholder="숫자만 입력해주세요 예)01012345678" maxlength="11" required>
                 </dd>
-                <dd><button type="button" id="tell_overlap_btn"></button>인증번호받기</dd>
+                <dd><button type="button" id="tell_overlap_btn">인증번호받기</button></dd>
                 <dt>주소<em>*</em></dt>
                 <dd>
                     <button type="button" id="house_btn">주소검색</button>
@@ -64,13 +64,15 @@
                 <dd></dd>
                 <dt>생년월일</dt>
                 <dd>
-                    <input type="text" name="user_year" placeholder="yyyy" maxlength="4">
-                    <input type="text" name="user_month" placeholder="mm" maxlength="2">
-                    <input type="text" name="user_work" placeholder="dd" maxlength="2">
+                    <input type="text" name="player_year" placeholder="yyyy" maxlength="4">
+                    <input type="text" name="player_month" placeholder="mm" maxlength="2">
+                    <input type="text" name="player_work" placeholder="dd" maxlength="2">
                 </dd>
                 <dd></dd>
             </dl>
-            <div class="btn"></div>
+            <div class="btn">
+                <button type="submit" id="join">가입하기</button>
+            </div>
         </form>
     </main>
 </body>

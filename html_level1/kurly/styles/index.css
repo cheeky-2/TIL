@@ -1,0 +1,32 @@
+main {}
+main h1 {}
+main h1 a {}
+main h1 a img {}
+main .law {}
+main .law h2 {}
+main .law h3 {}
+main .law p {}
+main #login_frm {}
+main #login_frm .member_info {}
+main #login_frm .member_info dt {}
+main #login_frm .member_info dt em {}
+main #login_frm .member_info dd {}
+main #login_frm .member_info dd+dd {}
+main #login_frm .member_info dd input {}
+main #login_frm .member_info dd input[name^=user_] {}
+main #login_frm .member_info dd button {}
+main #login_frm .member_info dd button[id$=btn] {}
+main #login_frm .member_info dd .tell_kind {}
+main #login_frm .member_info dd .tell_kind option {}
+main #login_frm .member_info dd .tell_kind option:nth-child(1) {}
+main #login_frm .member_info dd .tell_kind option:nth-child(2) {}
+main #login_frm .member_info dd .tell_kind option:nth-child(3) {}
+main #login_frm .member_info dd span {}
+main #login_frm .member_info dd input[name^=player_] {}
+main #login_frm .member_info dd input:nth-child(1)[name^=player_] {}
+main #login_frm .member_info dd input:nth-child(2)[name^=player_] {}
+main #login_frm .member_info dd input:nth-child(3)[name^=player_] {}
+/* main h1 #login_frm .member_info dd input:nth-child(1) {} */
+/* dd다음 형제 dd의 자식 input을 잡는법을 아직 잘 모르겠음 */
+main #login_frm .btn {}
+main #login_frm .btn #join {}
