@@ -1,32 +1,69 @@
-main {}
+main {
+    width:1000px;
+    background-color:#eee;
+    margin:0 auto;
+}
 main h1 {}
 main h1 a {}
 main h1 a img {}
-main .law {}
-main .law h2 {}
-main .law h3 {}
-main .law p {}
+/* ===============가입약관 */
+main .law {
+    background-color:#fff;
+    width:90%; height:180px; /* 보이는 영역 크기 */
+    margin:30px auto; padding:16px;
+    overflow:auto;
+    /* 부모 크기보다 자식이 클 경우 auto자동으로 스크롤을 보이고 부모 크기보다 자식이 작거나 같다면 auto자동으로 스크롤을 숨기는 속성값 */
+}
+main .law h2 {margin:0 0 30px;}
+main .law h3 {margin:0 0 15px;}
+main .law p {line-height:1.5; margin:20px 0;}
+/* ===============가입정보입력 */
 main #login_frm {}
-main #login_frm .member_info {}
-main #login_frm .member_info dt {}
-main #login_frm .member_info dt em {}
+main #login_frm .member_info {
+    /* width:1000px; */
+    overflow:hidden;
+}
+main #login_frm .member_info dt {
+    width:200px; background-color:lime;
+    float:left; clear:both;
+}
 main #login_frm .member_info dd {}
-main #login_frm .member_info dd+dd {}
-main #login_frm .member_info dd input {}
-main #login_frm .member_info dd input[name^=user_] {}
-main #login_frm .member_info dd button {}
-main #login_frm .member_info dd button[id$=btn] {}
-main #login_frm .member_info dd .tell_kind {}
-main #login_frm .member_info dd .tell_kind option {}
-main #login_frm .member_info dd .tell_kind option:nth-child(1) {}
-main #login_frm .member_info dd .tell_kind option:nth-child(2) {}
-main #login_frm .member_info dd .tell_kind option:nth-child(3) {}
-main #login_frm .member_info dd span {}
-main #login_frm .member_info dd input[name^=player_] {}
-main #login_frm .member_info dd input:nth-child(1)[name^=player_] {}
-main #login_frm .member_info dd input:nth-child(2)[name^=player_] {}
-main #login_frm .member_info dd input:nth-child(3)[name^=player_] {}
-/* main h1 #login_frm .member_info dd input:nth-child(1) {} */
-/* dd다음 형제 dd의 자식 input을 잡는법을 아직 잘 모르겠음 */
+/* main #login_frm .member_info dd:nth-of-type(odd) {background-color:yellow;} */
+main #login_frm .member_info dd:nth-of-type(2n+1) {
+    width:650px;
+    background-color:yellow;
+    float:left;
+}
+/* main #login_frm .member_info dd:nth-of-type(even) {background-color:aqua;} */
+main #login_frm .member_info dd:nth-of-type(2n) {
+    width:150px;
+    background-color:aqua;
+    float:left;
+}
+/* ===============나머지 자식, 자손 개별 선택자 */
+main #login_frm .member_info dt em {}
+/* ===============id, pw, name, email, phone 묶음속성 */
+main #login_frm .member_info dd input[name^=user_] {
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-radius:4px;
+    width:90%; padding:12px;
+}
+/* ===============개별속성(id) */
+main #login_frm .member_info dd input[name$=id] {}
+/* ===============오른쪽 중복확인, 인증번호 버튼 묶음 선택자 */
+main #login_frm .member_info dd:nth-of-type(2n) .btn {background-color:red;}
+/* ===============휴대폰, 주소, 성별, 생년월일 선택자 */
+main #login_frm .member_info dd select[name^=news] {}
+main #login_frm .member_info dd select[name^=news] option {}
+main #login_frm .member_info dd input[name*=phone] option {}
+/* ===============인증번호 버튼 개별 선택자 */
+main #login_frm .member_info dd #authentication_btn {background-color:coral;}
+main #login_frm .member_info dd #address_search_btn {}
+main #login_frm .member_info dd #address_search_btn + span {}
+main #login_frm .member_info dd input[name=gender] {}
+main #login_frm .member_info dd input[name=gender] + label {background-color:skyblue;}
+main #login_frm .member_info dd input[name^=birthday] {}
+/* ===============가입버튼 */
 main #login_frm .btn {}
-main #login_frm .btn #join {}
+main #login_frm .btn #sign_up_btn {}
