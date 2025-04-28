@@ -3,9 +3,14 @@ main {
     background-color:#eee;
     margin:0 auto;
 }
-main h1 {}
+main h1 {
+    text-align:center;
+    padding-top:50px;
+}
 main h1 a {}
-main h1 a img {}
+main h1 a img {
+    width:120px;
+}
 /* ===============가입약관 */
 main .law {
     background-color:#fff;
@@ -14,9 +19,18 @@ main .law {
     overflow:auto;
     /* 부모 크기보다 자식이 클 경우 auto자동으로 스크롤을 보이고 부모 크기보다 자식이 작거나 같다면 auto자동으로 스크롤을 숨기는 속성값 */
 }
-main .law h2 {margin:0 0 30px;}
-main .law h3 {margin:0 0 15px;}
-main .law p {line-height:1.5; margin:20px 0;}
+main .law h2 {
+    margin:0 0 30px;
+    font-size:0.875rem;
+}
+main .law h3 {
+    margin:0 0 15px;
+    font-size:0.875rem;
+}
+main .law p {
+    line-height:1.5; margin:20px 0;
+    font-size:0.875rem;
+}
 /* ===============가입정보입력 */
 main #login_frm {}
 main #login_frm .member_info {
@@ -72,6 +86,7 @@ main #login_frm .member_info dd select[name^=news] {
     float:left;
     margin-right:5px;
     background:#fff url(../images/ico_down_16x10.png) no-repeat 93% center / 10px;/* 통합버전으로 쓸 때 사이즈 조절은 마지막에 /쓰고 사이즈를 쓰면된다 | 여기선 /앞뒤로 공백이 있는데 그건 우리가 쉽게 보기위해 공백을 넣은것이다 원래는 공백을 안써도 된다 */
+    margin-left:32px;
 }
 main #login_frm .member_info dd select[name^=news] option {}
 main #login_frm .member_info dd input[name*=phone] {
@@ -86,10 +101,15 @@ main #login_frm .member_info dd #address_search_btn {
     border:1px solid #5f0080;
     background-color:#fff; width:90%;
     padding:12px 0; border-radius:4px;
+    font-size:1.125rem;
+    font-weight:500;
 }
 main #login_frm .member_info dd #address_search_btn + span {
     display:block;
+    text-align:left;
+    padding-left:32px;
     color:#aaa;
+    margin-top:8px;
 }
 main #login_frm .member_info .gender_g {text-align:center;}/* html에서 dd에게 클래스를 주어 선택자를 하나 더 만든것 */
 main #login_frm .member_info dd input[name=gender] {
@@ -120,6 +140,7 @@ main #login_frm .member_info dd:nth-last-of-type(2) {
     background-color:#fff;
     width:calc(650px * 0.9); padding:7.5px 0;
     border:1px solid #5f0080; border-radius:4px;
+    margin-left:32px;
 } 
 /* main #login_frm .member_info dt:nth-of-type(9)+dd {
     background-color:#fff;
