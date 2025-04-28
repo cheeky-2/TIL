@@ -24,24 +24,27 @@ main #login_frm .member_info {
     overflow:hidden;
 }
 main #login_frm .member_info dt {
-    width:200px; background-color:lime;
     float:left; clear:both;
+    text-align:center;
+    line-height:45px;
+    height:45px;
+    font-size:1.125rem;
+    width:200px;
 }
-main #login_frm .member_info dd {}
+main #login_frm .member_info dd {text-align:center;}
 /* main #login_frm .member_info dd:nth-of-type(odd) {background-color:yellow;} */
 main #login_frm .member_info dd:nth-of-type(2n+1) {
     width:650px;
-    background-color:yellow;
     float:left;
+    margin-bottom:10px;
 }
 /* main #login_frm .member_info dd:nth-of-type(even) {background-color:aqua;} */
 main #login_frm .member_info dd:nth-of-type(2n) {
     width:150px;
-    background-color:aqua;
     float:left;
 }
 /* ===============나머지 자식, 자손 개별 선택자 */
-main #login_frm .member_info dt em {}
+main #login_frm .member_info dt em {color:blue;}
 /* ===============id, pw, name, email, phone 묶음속성 */
 main #login_frm .member_info dd input[name^=user_] {
     background-color:#fff;
@@ -52,18 +55,99 @@ main #login_frm .member_info dd input[name^=user_] {
 /* ===============개별속성(id) */
 main #login_frm .member_info dd input[name$=id] {}
 /* ===============오른쪽 중복확인, 인증번호 버튼 묶음 선택자 */
-main #login_frm .member_info dd:nth-of-type(2n) .btn {background-color:red;}
+main #login_frm .member_info dd:nth-of-type(2n) {
+    text-align:right;
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn {
+    background-color:#5f0080; color:#fff;
+    width:90%; height:45px; border-radius:5px;
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn:hover {
+    filter:brightness(110%);
+}
 /* ===============휴대폰, 주소, 성별, 생년월일 선택자 */
-main #login_frm .member_info dd select[name^=news] {}
+main #login_frm .member_info dd select[name^=news] {
+    width:60px; border:1px solid #ccc; border-radius:4px;
+    padding:4px; font-size:0.875rem; height:50px;
+    float:left;
+    margin-right:5px;
+    background:#fff url(../images/ico_down_16x10.png) no-repeat 93% center / 10px;/* 통합버전으로 쓸 때 사이즈 조절은 마지막에 /쓰고 사이즈를 쓰면된다 | 여기선 /앞뒤로 공백이 있는데 그건 우리가 쉽게 보기위해 공백을 넣은것이다 원래는 공백을 안써도 된다 */
+}
 main #login_frm .member_info dd select[name^=news] option {}
-main #login_frm .member_info dd input[name*=phone] option {}
+main #login_frm .member_info dd input[name*=phone] {
+    float:left;
+    width:calc(90% - 65px);/* 계산기 불러오는 속성 calc | 연산 기호의 앞뒤에 무조건 공백을 넣어야한다 그리고 항상 계산하는 값의 단위를 꼭 써야한다 | 주로 계산기를 불러올땐 단위가 다른데 계산해야하는 상황에서 쓴다 */
+}
 /* ===============인증번호 버튼 개별 선택자 */
-main #login_frm .member_info dd #authentication_btn {background-color:coral;}
-main #login_frm .member_info dd #address_search_btn {}
-main #login_frm .member_info dd #address_search_btn + span {}
-main #login_frm .member_info dd input[name=gender] {}
-main #login_frm .member_info dd input[name=gender] + label {background-color:skyblue;}
-main #login_frm .member_info dd input[name^=birthday] {}
+main #login_frm .member_info dd #authentication_btn {
+    background-color:#ccc;
+}
+main #login_frm .member_info dd #address_search_btn {
+    border:1px solid #5f0080;
+    background-color:#fff; width:90%;
+    padding:12px 0; border-radius:4px;
+}
+main #login_frm .member_info dd #address_search_btn + span {
+    display:block;
+    color:#aaa;
+}
+main #login_frm .member_info .gender_g {text-align:center;}/* html에서 dd에게 클래스를 주어 선택자를 하나 더 만든것 */
+main #login_frm .member_info dd input[name=gender] {
+    display:none;
+}
+/* main #login_frm .member_info dt:nth-of-type(8)+dd {
+    background-color:aqua;
+    text-align:center;
+} */
+main #login_frm .member_info dd input[name=gender] + label {
+    /* 비활성화 디자인 */
+    background-image:url(../images/check_state.svg);
+    padding-left:21px;
+    background-repeat:no-repeat;
+    background-size:15px;
+    background-position:left center;
+    font-weight:500; font-size:0.9375rem;
+    margin-right:25px;
+}
+main #login_frm .member_info dd input[name=gender] + label:last-of-type {margin-right:0;}
+main #login_frm .member_info dd input[name=gender]:checked + label {
+    /* 활성화 디자인 */
+    background-image:url(../images/check_state_on.png);
+    /* filter:invert(1); *//* 색반전태그 1은 적용, 0은 미적용 */
+}
+main #login_frm .member_info .gender_g ~ dd {text-align:center;}
+main #login_frm .member_info dd:nth-last-of-type(2) {
+    background-color:#fff;
+    width:calc(650px * 0.9); padding:7.5px 0;
+    border:1px solid #5f0080; border-radius:4px;
+} 
+/* main #login_frm .member_info dt:nth-of-type(9)+dd {
+    background-color:#fff;
+    width:90%;
+} */
+/* main #login_frm .member_info dd .number_p {
+    width:90%;
+    border:1px solid #5f0080;
+    background-color:#fff; padding:12px 0;
+    border-radius:4px;
+} */
+main #login_frm .member_info dd input[name^=birthday] {
+    width:60px; text-align:center;
+}
+main #login_frm .member_info dd input[name^=birthday]::placeholder {
+    color:#aaa;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span::after {/* HTML에 없는데 CSS에서 가상의 요소를 만들기 | after는 뒤에 만드는거고 before이라고 적으면 앞에 만드는것 */
+    /* CSS에서 만든 가상의 태그의 블록속성을 정하고 그 안에 쓸 내용까지 정한다 */
+    content:'/';
+    display:inline-block;
+    font-size:14px; color:#aaa; margin:0 4px;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span:last-child::after {display:none;}
 /* ===============가입버튼 */
-main #login_frm .btn {}
-main #login_frm .btn #sign_up_btn {}
+main #login_frm > .btn {text-align:center;}
+main #login_frm .btn #sign_up_btn {
+    background-color:#5f0080; color:#fff;
+    width:35%; height:45px; border-radius:8px;
+}
+main #login_frm .btn #sign_up_btn:hover {filter:brightness(120%)}
