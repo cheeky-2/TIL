@@ -14,3 +14,29 @@
 .wrap1 li:nth-child(even) {background-color:yellow}
 /* .wrap1 li:nth-child(3) {background-color:coral}
 .wrap1 li:nth-child(4) {background-color:lime} */
+/* ===================4/29 flex 2일차 연습 */
+.wrap2 {
+    background-color:#eee;
+    width:90%; margin:30px auto 0;
+    padding:20px; height:600px;
+    display:flex;/* 방향과 줄바꿈 기본값 row, nowrap */
+    flex-flow:row nowrap;
+    /* 교차축 2줄 이상일 때 정렬방법(flex-wrap:wrap 기준) */
+    /* align-content:space-between; */
+    /* 교차축 1줄 이상일 때 정렬방법(flex-wrap:nowarp 기준) */
+    align-items:center;
+}
+.wrap2 li {
+    /* width:150px; */ height:150px; color:#fff; font-size:5rem;
+    flex:1;
+}
+.wrap2 li:nth-child(odd) {background-color:purple;}
+.wrap2 li:nth-child(even) {background-color:hotpink;}
+.wrap2 li:nth-child(1) {order:5;}
+.wrap2 li:nth-child(2) {order:4;}
+.wrap2 li:nth-child(3) {order:6;}
+.wrap2 li:nth-child(4) {order:1; flex:2;}
+.wrap2 li:nth-child(5) {order:3;}
+.wrap2 li:nth-child(6) {order:2;}
+.wrap2 li:nth-child(7) {order:0; align-self:flex-end;}
+.wrap2 li:nth-child(8) {order:7;}
