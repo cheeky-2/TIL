@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .btn {
+            display:block;
+            border:1px solid #000;
+            width:400px; height:200px;
+        }
+        #btn1 {
+            /* gradient 사용 시 -color 없이 통합 background로 명령한다 */
+            background:linear-gradient(-90deg, #eee, rgba(255,0,80,0.5), rgba(0,10,255,0.3), rgba(0,130,100,0.1));/* 이때 속성 앞 deg은 그라데이션 주는 방향을 설정하는 것이다(회전)  */
+            background-size:400%;
+            transition:all 1s;
+        }
+        #btn1:hover {
+            background-position:100% 0;
+        }
+        h1 {
+            text-transform:uppercase;
+            font-size:2.5rem;
+            font-weight:800;
+            background:linear-gradient(90deg, purple, darkblue,#555,brown);
+            width:max-content;
+            /* display:inline-block; */
+            /* gradient 색상을 글자에 적용하기 위한 방법(마스크구조) */
+            color:transparent;/* 글자의 색을 투명으로 바꾸겠다  */
+            background-clip:text;/* 백그라운드색을 글자에 클립마스크 하겠다 */
+            background-size:500%; transition:all 1.5s;
+        }
+        h1:hover {background-position-x:100%;}
+        h2 {
+            font-size:3rem;
+            font-weight:700;
+            background: linear-gradient(90deg,rgba(255, 0, 0, 1) 0%, rgba(255, 170, 43, 1) 19%, rgba(244, 255, 31, 1) 32%, rgba(0, 171, 37, 1) 47%, rgba(0, 96, 214, 1) 63%, rgba(3, 0, 158, 1) 80%, rgba(107, 0, 161, 1) 100%);
+            width:max-content;
+            color:transparent;
+            background-clip:text;
+            background-size:1200%;
+            transition:all 3s;
+        }
+        h2:hover {background-position-x:100%;}
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover me!</button>
+    <h1>HTML & CSS & Javascript & figma & react</h1>
+    <h2>가나다라마바사아자차카타파하<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h2>
+</body>
+</html>

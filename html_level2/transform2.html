@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform2d | CSS</title>
+    <link href="../css_basic/styles/reset.css" rel="stylesheet">
+    <style>
+        #parent {
+            background-color:#eee; padding:40px;
+        }
+        #parent .child {
+            width:150px; height:150px;/* transform 적용 전 크기 기본세팅 */
+            border:1px solid #000;
+        }
+        #parent .child1 {
+            transition:transform 1s;
+            transform-origin:right center;/* 기준축 설정(X Y순서로 입력) */
+        }
+        #parent:hover .child1 {
+            transform:scaleX(1.5);
+        }
+        #parent .child2 {
+            transition:all 0.5s;
+            /* transition:transform 0.5s; */
+            transform-origin:right bottom;
+            position:relative; left:0; top:0;
+        }
+        #parent:hover .child2 {
+            /* transform:rotate(-40deg); *//* 회전 설정 */
+            /* transform:skewX(-25deg); *//* 기울기 설정 */
+            /* transform:translate(50px, -20px); */
+            left:50px; top:-20px;
+            /* position:relative; left:50px; top:-20px; */
+        }
+        /* 내비게이션 만들기 */
+        nav {}
+        nav .gnb {
+            display:flex;
+        }
+        nav .gnb > li {
+            width:400px;
+            background-color:#333;
+            position:relative;
+        }
+        nav .gnb > li:hover .lnb {
+            /* display:block; */
+            transform:scaleY(1) translateY(0);
+            opacity:1;
+        }
+        nav .gnb > li > a {
+            color:#fff;
+            display:block;
+            text-align:center;
+            line-height:40px;
+        }
+        nav .gnb > li > .lnb {
+            position:absolute; left:0; top:40px;
+            width:100%;
+            background-color:#eee;
+            /* display:none; */
+            transform:scaleY(0) translateY(-30px);
+            opacity:0;
+            /* scaleY(0) 숨기기, scaleY(1) 보이기 */
+            /* scaleX(0) 숨기기, scaleX(1) 보이기 */
+            transition:all 0.6s;
+            transform-origin:left top;
+        }
+        nav .gnb > li > .lnb li {}
+        nav .gnb > li > .lnb li a {
+            display:block;
+            text-align:center;
+            line-height:25px;
+        }
+        </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+    </div>
+    <hr>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">메인메뉴1</a>
+                <ul class="lnb">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴2</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

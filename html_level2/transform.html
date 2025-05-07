@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link href="../css_basic/styles/reset.css" rel="stylesheet">
+    <style>
+        .parent {
+            background-color:#eee; padding:30px;
+        }
+        .parent .child {
+            width:100px; height:100px; border:1px solid #000;
+        }
+        .parent .child1 {
+            background-color:aqua;
+            transition:background-color 2s;/* 넣을 때와 뺄때 모두 자연스럽게 적용시키려면 hover가 아니라 자체한테 적용시키면 된다 */
+        }
+        .parent .child1:hover {
+            background-color:lime;
+            /* transition:애니메이션적용속성 지속시간; */
+        }
+        .parent .child2 {
+            transition:width 0.5s, height 1s;/* 속성에 여러 개를 넣고 싶을 때 ,를 넣어서 여러가지를 적용시킬 수 있다 */
+        }
+        .parent .child2:hover {
+            width:150px; height:200px;
+        }
+        .parent .child3 {
+            transition:border 0.3s;
+        }
+        .parent:hover .child3 {
+            border:5px solid #f00;
+        }
+        .parent .child4 {
+            border-radius:50%;
+            position:relative; left:0;/* 시작위치(현재위치기준) */
+            transition:left 0.7s linear 1s;/* transition에 들어가는건 변화하는 속성을 쓰는 것이다.position을 쓰면 안되고 left를 써야한다. */
+            /* 가속도 적용 속성 ease(기본), linear(일정한 속도), ease-in(점점 빠르게), ease-out(점점 느리게) | 이 속성 뒤에 시간을 추가하면 그 시간 뒤에 움직임이 적용된다 */
+        }
+        .parent:hover .child4 {/* 움직이는 동작을 줄 때 부모에게 줘야 렉걸리는 듯한 버벅이는 움직임이 나오지않고 부드럽게 움직인다. */
+            left:300px; 
+        }
+        .parent .child5 {
+            position:relative; left:0; top:0;
+            transition:border-radius 0.5s,background-color 1s,left 1s,top 1s;
+        }
+        .parent:hover .child5 {
+            background-color:skyblue;
+            border-radius:50%; 
+            left:200px; top:150px;
+        }
+        .parent .child6 {
+            width:400px; height:600px;
+            background-image:url(https://i.pinimg.com/736x/82/54/8d/82548deb872291b46a92ba367d8b3720.jpg);
+            background-size:120%;
+            background-position:center;/* 포지션이 센터이면 이미지가 바뀌거나 할때 좀 더 자연스럽다 */
+            /* transition:background-position 0.5s, background-size 1s; */
+            transition:all 1s;/* 개별 적용이 아니라 변화값이 다 같다면 이렇게 처리해도 된다 */
+        }
+        .parent .child6:hover {
+            background-image:url(https://i.pinimg.com/736x/e8/9d/2c/e89d2cfe43ed515afc6fa94297caaed0.jpg);
+            /* background-position:100px 0; */
+            background-size:130%;
+        }
+        .parent .child7 {
+            width:800px; height:229px;
+            background-image:url(./images/bg.jpg);
+            background-position:0 0;
+            background-size:cover;
+            background-repeat:repeat-x;/* x축으로만 반복 */
+            transition:all 10s linear;
+        }
+        .parent .child7:hover {
+            background-position:-3000px 0;/* 음수의 값을 쓰면 오른쪽으로 간다 */
+        }
+    </style>
+</head>
+<body>
+    <h1>transition</h1>
+    <p>기존 CSS 속성이 사용자의 동작에 의해서 변경될 때 애니메이션 효과를 주는속성</p>
+    <div class="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+        <div class="child child4"></div>
+        <div class="child child5"></div>
+        <div class="child child6"></div>
+        <div class="child child7"></div>
+    </div>
+</body>
+</html>
