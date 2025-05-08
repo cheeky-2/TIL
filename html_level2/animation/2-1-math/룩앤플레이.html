@@ -25,30 +25,39 @@
 
         main #visual #deco .obj1 {
             top:170px; left:50%; margin-left:-342px;
+            /* animation:l_r 10s linear 0s infinite alternate-reverse both; */
         }
         main #visual #deco .obj2 {
             left:0; top:150px;
+            /* animation:zoom_in 1s ease 0s infinite alternate both; */
         }
         main #visual #deco .obj3 {
             left:100px; top:250px;
+            /* animation:l_r 3s linear 0s infinite alternate-reverse both; */
         }
         main #visual #deco .obj4 {
             left:150px; top:350px;
+            /* animation:zoom_in 1s ease 0s infinite alternate both; */
         }
         main #visual #deco .obj5 {
             right:0; top:150px;
+            /* animation:l_r 3s linear 0s infinite alternate both; */
         }
         main #visual #deco .obj6 {
             right:200px; top:250px;
+            /* animation:l_r 3s linear 0s infinite alternate-reverse both; */
         }
         main #visual #deco .obj7 {
             right:200px; top:240px;
+            /* animation:zoom_in 1s ease 0s infinite alternate both; */
         }
         main #visual #deco .obj8 {
             left:270px; top:440px;
+            /* animation:l_r 3s linear 0s infinite alternate both; */
         }
         main #visual #deco .obj9 {
             right:0; top:440px;
+            /* animation:zoom_in 1s ease 0s infinite alternate both; */
         }
 
         main #book_center {
@@ -67,8 +76,24 @@
             text-align:center; background:#f1f1f1; color:#222;
         }
         main .category a.active {background:#26bad7; color:#fff;}
-
+        main #visual #deco .obj1,
+        main #visual #deco .obj3,
+        main #visual #deco .obj6 {animation:l_r 2s linear 0s infinite alternate-reverse both;}
+        main #visual #deco .obj5,
+        main #visual #deco .obj8 {animation:l_r 2s linear 0s infinite alternate both;}
+        main #visual #deco .obj2,
+        main #visual #deco .obj4,
+        main #visual #deco .obj7,
+        main #visual #deco .obj9 {animation:zoom_in 1s ease 0s infinite alternate both;}
         /* 애니메이션 */
+        @keyframes zoom_in {
+            from {transform:scale(1);}
+            to {transform:scale(1.2);}
+        }
+        @keyframes l_r {
+            from {transform:rotateZ(0);}
+            to {transform:rotateZ(20deg);}
+        }
 
     </style>
 </head>

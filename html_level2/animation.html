@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation | keyframes | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {background:#eee; padding:50px; height:100vh;}
+        main .target {}/* 공통 */
+        main .ball {
+            background:radial-gradient(at left top, #fff, #222);
+            background-size:170%;
+            /* background-position:100%; */
+            width:50px; height:50px; border-radius:50%;
+            /* animation:right500 12s linear 0.5s 3 alternate both; *//* infinite는 무한반복 */
+        }
+        main .ball2 {
+            background:radial-gradient(at right bottom, #7a00cc, #1005e8);
+            background-size:130%;
+            width:80px; height:80px; border-radius:50%;
+            /* animation:bottom400 14s ease-out 0.3s 5 alternate-reverse both; */
+        }
+        main .ball3 {/* animation:zigzag 75s linear 0.5s 8 alternate both; */}
+        main .ball3 img {width:80px; animation:rotate360 15s linear 0.5s 6 alternate both;}
+        section {}
+        section .ad {height:50vh; padding:50px;}
+        section .ad span {
+            text-transform:uppercase;
+            font-size:3rem; font-weight:800;
+            display:inline-block;
+            animation:ad_txt 0.5s both;
+    }
+        section .ad span:nth-child(1) {animation-delay:0s;}
+        section .ad span:nth-child(2) {animation-delay:0.4s;}
+        section .ad span:nth-child(3) {animation-delay:0.8s;}
+        section .ad span:nth-child(4) {animation-delay:1.2s;}
+        section .ad2 {
+            padding:50px;
+            display:flex; flex-flow:column nowrap;
+            animation:ad_txt2 0.5s linear;
+        }
+        section .ad2 em {font-size:3.5rem; font-weight:700; display:inline-block;}
+        section .ad2 em:nth-child(1) {animation-delay:0s;}
+        section .ad2 em:nth-child(2) {animation-delay:0.2s;}
+        section .ad2 em:nth-child(3) {animation-delay:0.4s;}
+        section .ad2 em:nth-child(4) {animation-delay:0.6s;}
+        section .ad2 em:nth-child(5) {animation-delay:0.8s;}
+        section .ad2 em:nth-child(6) {animation-delay:1s;}
+        section .ad2 em:nth-child(7) {animation-delay:1.2s;}
+        /* 애니메이션 적용 순서 1. 키프레임(장면)생성 2. 애니메이션 호출 */
+        @keyframes ad_txt2 {
+            form {transform:translateX(0);}
+            to {transform:translateX(80px);}
+        }
+        @keyframes ad_txt {
+            from {transform:translateY(50px); opacity:0;}
+            to {transform:translateY(0); opacity:1;}
+        }
+        @keyframes rotate360 {
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
+        @keyframes zigzag {/* 단계별 또는 연속적으로 이동시키기(앞에 퍼센트 숫자) */
+            0% {transform:translate(0, 0);}
+            25% {transform:translate(500px, 0);}
+            50% {transform:translate(0, 500px);}
+            75% {transform:translate(500px, 500px);}
+        }
+        @keyframes right500 {
+            from {transform:translateX(0) rotate(0);}
+            to {transform:translateX(500px) rotate(360deg);}
+        }
+        @keyframes bottom400 {
+            from {transform:translateY(0) rotate(0);}
+            to {transform:translateY(400px) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="target ball"></div>
+        <div class="target ball2"></div>
+        <div class="target ball3"><img src="https://cdn-icons-png.flaticon.com/128/587/587444.png" alt=""></div>
+    </main>
+    <section>
+        <div class="ad">
+            <span>h</span>
+            <span>t</span>
+            <span>m</span>
+            <span>l</span>
+        </div>
+        <div class="ad2">
+            <em>미</em>
+            <em>래</em>
+            <em>식</em>
+            <em>량</em>
+            <em>과</em><br>
+            <em>간</em>
+            <em>식</em>
+        </div>
+    </section>
+</body>
+</html>

@@ -35,16 +35,45 @@
         /* 
         1(주황선) 2(책) 3(문어) 4(벌) 5(꽃병) 6(별1) 7(별2)
         */
-        main #deco .obj1 {z-index:9; right:0;}
-        main #deco .obj2 {z-index:10; top:-100px; left:-50px;}
-        main #deco .obj3 {z-index:9; right:190px; top:0;}
-        main #deco .obj4 {z-index:11; right:0; bottom:0;}
-        main #deco .obj5 {z-index:11; right:150px; bottom:0;}
+        main #deco .obj1 {z-index:9; right:0; animation:rotate 0.8s linear alternate infinite;}
+        main #deco .obj2 {z-index:10; top:-100px; left:-50px;
+            /* animation:stop_move 1s ease 0s; */
+            animation:bk 1s both;
+        }
+        main #deco .obj3 {z-index:8; right:190px; top:0; animation:top 1s 0.8s both;}
+        main #deco .obj4 {z-index:11; right:0; bottom:0;
+            animation:bee 1s both;
+        }
+        main #deco .obj4 img {animation:right_tun 0.3s ease-out 0.3s;}
+        main #deco .obj5 {z-index:11; right:150px; bottom:0; animation:rotate 0.8s linear alternate-reverse infinite;}
         main #deco .obj6 {z-index:12; left:-50px; bottom:100px;}
         main #deco .obj7 {z-index:12; right:50px; top:-30px;}
-        
+        main #deco .obj6, main #deco .obj7 {animation:scale 0.8s linear alternate infinite;}
         /* 애니메이션 */
-        
+        /* @keyframes stop_move {
+            from {transform:translateX(0);}
+            to {transform:translateX(-80px);}
+        } */
+        @keyframes rotate {
+            0% {transform:rotate(0);}
+            100% {transform:rotate(10deg);}
+        }
+        @keyframes scale {
+            0% {transform:scale(1);}
+            100% {transform:scale(1.2);}
+        }
+        @keyframes bk {/* 책 */
+            from {transform:translateX(100px);}
+            to {transform:translateX(0);}
+        }
+        @keyframes bee {/* 벌 */
+            0% {transform:translate(0,0);}
+            100% {transform:translate(-350px, 100px) rotate(60deg);}
+        }
+        @keyframes top {/* 문어 */
+            from {transform:translateY(0);}
+            to {transform:translateY(-130px);}
+        }
 
     </style>
 </head>
