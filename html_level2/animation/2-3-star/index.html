@@ -38,12 +38,12 @@
         }
         .menu_contents .menu a {
             margin-right:10px; overflow:hidden; position:relative;
-            border-radius:10px;
+            border-radius:10px; display:none;
         }
-        .menu_contents .menu3 a {display:none;}
-        .menu_contents .menu2 a {display:none;}
-        .menu_contents .menu1 a {transition:border-radius 0.2s linear; z-index:1;}
-        .menu_contents .menu a:hover {border-radius:50%; overflow:hidden;}
+        /* .menu_contents .menu3 a {display:none;}
+        .menu_contents .menu2 a {display:none;} */
+        .menu_contents .menu1 a {transition:border-radius 0.2s linear; /* z-index:1; */ display:block;}
+        .menu_contents .menu a:hover {border-radius:50%;}
         .menu_contents .menu a:hover .info {display:block;}
         .menu_contents .menu a:last-child {margin-right:0;}
         .menu_contents .menu a img {width:100%;}

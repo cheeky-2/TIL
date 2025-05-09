@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹3-2 | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        /* desktop 1025 ~ 100%(column 3) */
+        /* tablet 769 ~ 1024(column 2) */
+        /* mobile 320 ~ 768(column 1) */
+        @media screen and (min-width:320px) {
+            #youtube_wrap {
+                min-width:320px;
+            }
+            #youtube_wrap header {
+                height:56px; background-color:brown; position:fixed; left:0; top:0; width:100%;
+                /* 처음부터 화면에 고정된 경우 = fixed */
+                /* 스크롤과 함께 움직이다가 특정 위치부터 고정된 경우 = sticky */
+                /* fixed설정한 경우 해당 요소가 부유하기 때문에 그 다음 형제요소와 겹쳐지는 문제점이 발생한다. 해당 문제를 해결하기 위해 형제 요소에 부유한 요소의 높이만큼 margin-겹친방향 설정해야 한다. */
+            }
+            #youtube_wrap main {
+                display:flex; flex-flow:row nowrap; margin-top:56px;/* fixed의 부유하는 성질때문에 뒤가 가려져서 위쪽에 마진을 주어야한다 */
+            }
+            #youtube_wrap main aside {display:none; }
+            #youtube_wrap main section {background-color:aqua; width:100%;}
+            #youtube_wrap main section .mv {display:flex; flex-flow:row wrap;}
+            #youtube_wrap main section .mv li {
+                width:calc(100%); height:300px;
+            }
+            #youtube_wrap main section .mv li:nth-child(odd) {background-color:blue;}
+            #youtube_wrap main section .mv li:nth-child(even) {background-color:pink;}
+        }
+        @media screen and (min-width:769px) {
+            #youtube_wrap {max-width:1024px;}
+            #youtube_wrap main section .mv li {width:calc(100% / 2);}
+            #youtube_wrap main aside {
+                display:block;
+                width:240px; height:calc(100vh - 56px);
+                position:fixed; left:0; top:56;
+            }
+            #youtube_wrap main section {width:calc(100% - 240px); margin-left:240px;}
+        }
+        @media screen and (min-width:1025px) {
+            #youtube_wrap main section .mv li {
+                width:calc(100% / 3)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="youtube_wrap">
+        <header>header</header>
+        <main>
+            <aside>왼쪽 고정영역</aside>
+            <section>
+                <ul class="mv">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

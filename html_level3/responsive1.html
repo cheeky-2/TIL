@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹 | CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {
+            /* 1920 가로크기 고정(반응형웹 제작 시 고정 크기 주의!) */
+            /* width:1920px; */
+            /* 최대제한너비 1920 (사용자가 보는 디바이스 크기가 1920 이하일 경우 상대적으로 자동크기조절 */
+            max-width:1920px;
+            /* 최소제한너비 901 (901~1920 사이값만 상대처리를 위한 최소제한값 설정) */
+            min-width:901px;/* 원래라면 320이여야하지만 데스크탑에 집중하기위해 901로 설정하였다 */
+            border:5px solid #000; height:100vh;
+        }
+        main .mv_list {
+            display:flex; flex-flow:row wrap;
+            /* 자식 사이 여백을 일정하게 적용시키는 flex 부모속성 */
+            gap:10px;
+        }
+        main .mv_list li {
+            /* 반응형에서 요소(w) 크기 조절 시 % 또는 calc() 계산법으로 상대처리를 반드시 해야 한다. 크기가 고정되는 광고 및 특정영역만 필요 시 최소한으로 px 고정 너비를 적용한다. */
+            /* width:calc(100% / 3); */
+            /* width:calc((100% - 20px) / 3); */
+            width:calc((100% - (10px * 2)) / 3);
+            height:250px;/* 임시높이값 */
+        }
+        main .mv_list li:nth-child(odd) {background-color:aqua;}
+        main .mv_list li:nth-child(even) {background-color:lime;}
+        /* 반응형규칙(사용자가 이용하는 디바이스가 달라졌을 때 인식하는 값) */
+        @media screen and (max-width:900px) {
+            /* 기존 CSS 중 현재 규칙에 맞춰 달라지는 값만 수정 */
+            main {
+                /* 첫번째 규칙 max-width:1920 에 의해서 1920보다 작은 값은 min 규칙으로 막지 않는한 모두 상대처리하기 때문에 또 입력하지 않아도 된다. */
+                /* max-width:900px; */
+                min-width:601px;
+                border-color:red;
+            }
+            main .mv_list li {width:calc((100% - (10px * 1)) / 2);}
+        }/* media 900 end */
+        @media screen and (max-width:600px) {
+            main {
+                min-width:320px;
+                border-color:blue;
+            }
+            main .mv_list li {width:100%}
+        }/* media 320~600 end */
+    </style>
+</head>
+<body>
+    <!-- 유튜브 영상 미리보기 반응형 구조 만들기 -->
+    <!-- Desktop : 3열 (901~1920) -->
+    <!-- Tablet : 2열 (601~900) -->
+    <!-- Mobile : 1열 (320~600) -->
+    <main>
+        <ul class="mv_list">
+            <li>미리보기1</li>
+            <li>미리보기2</li>
+            <li>미리보기3</li>
+            <li>미리보기4</li>
+            <li>미리보기5</li>
+            <li>미리보기6</li>
+            <li>미리보기7</li>
+            <li>미리보기8</li>
+        </ul>
+    </main>
+</body>
+</html>
