@@ -1,0 +1,16 @@
+@keyframes wheel {
+    from {transform:rotate(0);}
+    to {transform:rotate(-360deg);}
+}
+@keyframes bg_cloud {
+    from {transform:translateX(0%);}
+    to {transform:translateX(100%);}
+}
+@keyframes bg_city1 {
+    from {transform:translateX(0%);}
+    to {transform:translateX(100%);}
+}
+@keyframes bg_city2 {
+    0% {transform:translateX(0%);}
+    100% {transform:translateX(100%);}
+}

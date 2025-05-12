@@ -36,18 +36,22 @@ main .txt, main .car_list, main .car, main .scroll {
     width:1400px; margin:0 auto; position:relative; z-index:30;
 }
 /* 메인배경 */
-main .bg_wrap .bg {width:1400px; margin:0 auto;}
+main .bg_wrap {width:1400px; overflow:hidden;}
+main .bg_wrap .bg {margin:0 auto; /* width:1400px; */}
 main .bg_wrap .bg1 {
     height:100px; 
     background:url(../images/bg_cloud.png) repeat-x;
+    animation:bg_cloud 120s linear infinite;
 }
 main .bg_wrap .bg2 {
     height:200px; 
     background:url(../images/bg_city1.png) repeat-x;
+    animation:bg_city1 60s linear infinite;
 }
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
     background:url(../images/bg_city2.png) repeat-x;
+    animation:bg_city2 30s linear infinite;
 }
 /* 메인제목 */
 main .txt {}
@@ -60,4 +64,4 @@ main .car #left_tire, main .car #right_tire {
 }
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
-
+main .car #right_tire, main .car #left_tire {animation:wheel 1s linear infinite;}

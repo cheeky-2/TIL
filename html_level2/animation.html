@@ -38,10 +38,10 @@
         section .ad2 {
             padding:50px;
             display:flex; flex-flow:column nowrap;
-            animation:ad_txt2 0.5s linear;
+            animation:ad_txt2 0.5s linear both;
         }
         section .ad2 em {font-size:3.5rem; font-weight:700; display:inline-block;}
-        section .ad2 em:nth-child(1) {animation-delay:0s;}
+        section .ad2 em:nth-child(1) {animation-delay:0;}
         section .ad2 em:nth-child(2) {animation-delay:0.2s;}
         section .ad2 em:nth-child(3) {animation-delay:0.4s;}
         section .ad2 em:nth-child(4) {animation-delay:0.6s;}
@@ -50,7 +50,7 @@
         section .ad2 em:nth-child(7) {animation-delay:1.2s;}
         /* 애니메이션 적용 순서 1. 키프레임(장면)생성 2. 애니메이션 호출 */
         @keyframes ad_txt2 {
-            form {transform:translateX(0);}
+            from {transform:translateX(0);}
             to {transform:translateX(80px);}
         }
         @keyframes ad_txt {
