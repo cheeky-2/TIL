@@ -2,15 +2,7 @@
     from {transform:rotate(0);}
     to {transform:rotate(-360deg);}
 }
-@keyframes bg_cloud {
-    from {transform:translateX(0%);}
-    to {transform:translateX(100%);}
-}
-@keyframes bg_city1 {
-    from {transform:translateX(0%);}
-    to {transform:translateX(100%);}
-}
-@keyframes bg_city2 {
-    0% {transform:translateX(0%);}
-    100% {transform:translateX(100%);}
+@keyframes bg {
+    0% {background-position-x:0;}
+    100% {background-position-x:1000px;}
 }

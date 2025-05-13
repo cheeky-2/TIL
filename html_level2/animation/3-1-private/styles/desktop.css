@@ -29,6 +29,16 @@ main {
     top: 80px;
     text-align: center;
 }
+/* 좌/우 끊긴 배경 자연스럽게 처리하기 */
+main::before {
+    content:''; display:block; width:50%; height:100%; position:absolute; left:0; top:0;
+    background:linear-gradient(90deg, rgb(9,13,43), transparent);
+    z-index:15;
+}
+main::after {
+    content:''; display:block; width:50%; height:100%; position:absolute; right:0; top:0; background:linear-gradient(-90deg, rgb(9,13,43), transparent);
+    z-index:15;
+}
 main > * {max-width:1400px; margin:0 auto;}
 /* 중첩순서 처리 배경(10) 그라디언트(20) 나머지(30) */
 main .bg_wrap {position:absolute; z-index:10;}
@@ -36,22 +46,22 @@ main .txt, main .car_list, main .car, main .scroll {
     width:1400px; margin:0 auto; position:relative; z-index:30;
 }
 /* 메인배경 */
-main .bg_wrap {width:1400px; overflow:hidden;}
-main .bg_wrap .bg {margin:0 auto; /* width:1400px; */}
+main .bg_wrap {}
+main .bg_wrap .bg {margin:0 auto; width:1400px;}
 main .bg_wrap .bg1 {
     height:100px; 
     background:url(../images/bg_cloud.png) repeat-x;
-    animation:bg_cloud 120s linear infinite;
+    animation:bg 120s linear infinite;
 }
 main .bg_wrap .bg2 {
     height:200px; 
     background:url(../images/bg_city1.png) repeat-x;
-    animation:bg_city1 60s linear infinite;
+    animation:bg 60s linear infinite;
 }
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
     background:url(../images/bg_city2.png) repeat-x;
-    animation:bg_city2 30s linear infinite;
+    animation:bg 30s linear infinite;
 }
 /* 메인제목 */
 main .txt {}
@@ -60,8 +70,7 @@ main .txt {}
 main .car {margin-top:150px; text-align:center; width:600px;}
 main .car #car {width:100%;}
 main .car #left_tire, main .car #right_tire {
-    position:absolute; bottom:25px; width:67px;
+    position:absolute; bottom:25px; width:67px; animation:wheel 0.2s linear infinite;
 }
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
-main .car #right_tire, main .car #left_tire {animation:wheel 1s linear infinite;}
