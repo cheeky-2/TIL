@@ -31,7 +31,10 @@
         }
         main .video_bg video {
             position:absolute;
-            left:-100px; top:-200px; z-index:10;
+            z-index:10; left:-100px; top:-200px;
+            /* width:200%; right:50px; top:40px game_right */
+            /* width:250%; left:350px; top:30px; game2_wow */
+            /* width:350%; left:-870px; top:-470px; nani */
         }
         main .video_bg img {
             position:absolute; 
@@ -42,6 +45,11 @@
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation:right 15s linear infinite;
+        }
+        @keyframes right {
+            0% {background-position-x:0;}
+            100% {background-position-x:1000px;}
         }
     </style>
 </head>
@@ -53,6 +61,9 @@
     <main>
         <div class="center">
             <div class="video_bg">
+                <!-- <video src="video/game_right.mp4" autoplay muted loop></video> -->
+                <!-- <video src="video/game2_wow.mp4" autoplay muted loop></video> -->
+                <!-- <video src="video/nani.mp4" autoplay muted loop></video> -->
                 <video src="video/golden.mp4" autoplay muted loop></video>
                 <img src="images/img_intro.png" alt="">
             </div>
