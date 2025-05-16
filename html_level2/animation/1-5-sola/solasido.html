@@ -30,18 +30,18 @@
             text-align:center; color:#fff;
             font-size:3rem; letter-spacing:-1px;
             position:relative; top:400px;
-            animation:glja 2s both;
+            animation:txt 2s both;
         }
         /* class */
-
+        
         /* animation */
-        @keyframes glja {
+        @keyframes txt {
             0% {transform:translateY(20px) scale(0.9); opacity:0;}
             100% {transform:translateY(0px) scale(1); opacity:1;}
         }
         @keyframes bg {
-            0% {background-size:100%}
-            100% {background-size:120%}
+            0% {background-size:100%; background-repeat:repeat;}
+            100% {background-size:120%; background-repeat:no-repeat;}
         }
     </style>
     <script>
